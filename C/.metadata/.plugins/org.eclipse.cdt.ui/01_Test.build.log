@@ -1,0 +1,42 @@
+03:50:36 **** Incremental Build of configuration Release for project 01_Test ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=11059200UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: 01_Test.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,01_Test.map -mmcu=atmega16 -o "01_Test.elf"  ./main.o   
+'Finished building target: 01_Test.elf'
+' '
+'Invoking: AVR Create Extended Listing'
+avr-objdump -h -S 01_Test.elf  >"01_Test.lss"
+'Finished building: 01_Test.lss'
+' '
+'Create Flash image (ihex format)'
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex 01_Test.elf  "01_Test.hex"
+'Finished building: 01_Test.hex'
+' '
+'Create eeprom image (ihex format)'
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex 01_Test.elf  "01_Test.eep"
+'Finished building: 01_Test.eep'
+' '
+'Invoking: Print Size'
+avr-size --format=avr --mcu=atmega16 01_Test.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     124 bytes (0.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+
+03:50:37 Build Finished (took 737ms)
+

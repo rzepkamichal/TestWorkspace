@@ -1,0 +1,28 @@
+/*
+ * main.c
+ *
+ *  Created on: 26.12.2016
+ *      Author: sysoper
+ */
+#include <avr/io.h>
+#include <avr/delay.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+
+	int main(void){
+
+		DDRB = 0xFF;
+		DDRA = 0xFF;
+		DDRC =0xFF;
+		DDRD = 0xFF;
+
+		PORTA=(1<<PA4);
+
+
+	}
+
+
+

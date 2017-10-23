@@ -1,0 +1,176 @@
+/*
+ * main.c
+ *
+ *  Created on: 26.12.2016
+ *      Author: sysoper
+ */
+#include <avr/io.h>
+#include <avr/delay.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+	int random2(int min, int max){
+		int tmp;
+		    if (max>=min)
+		        max-= min;
+		    else
+		    {
+		        tmp= min - max;
+		        min= max;
+		        max= tmp;
+		    }
+		    	return max ? (rand() % max + min) : min;
+	}
+
+
+	int main(void){
+
+		int RandNumber1=random2(0,5);
+
+		DDRA = 0xFF;
+		DDRB = 0xFF;
+		DDRC = 0xFF;
+		DDRD = 0xFF;
+
+
+			PORTA=0xFF;
+			PORTB=0xFF;
+			PORTC=0xFF;
+			PORTD=0xFF;
+
+		_delay_ms(4000);
+
+			PORTA^= 0xFF;
+			PORTC^= 0xFF;
+
+			for(int i=1;i<=20;i++){
+					PORTA^= 0xFF;
+					PORTB^= 0xFF;
+					PORTC^= 0xFF;
+					PORTD^= 0xFF;
+
+					_delay_ms(1200);
+				}
+
+			PORTB^= 0xFF;
+			PORTD^= 0xFF;
+
+			PORTA=(1<<PA0);
+			_delay_ms(500);
+
+			PORTA=(1>>PA0);
+			PORTA=(1<<PA1);
+			_delay_ms(500);
+
+			PORTA=(1>>PA1);
+			PORTA=(1<<PA2);
+			_delay_ms(500);
+
+			PORTA=(1>>PA2);
+			PORTA=(1<<PA3);
+			_delay_ms(500);
+
+			PORTA=(1>>PA3);
+			PORTA=(1<<PA4);
+			_delay_ms(500);
+
+			PORTA=(1>>PA4);
+			PORTA=(1<<PA5);
+			_delay_ms(500);
+
+			PORTA=(1>>PA5);
+			PORTA=(1<<PA6);
+			_delay_ms(500);
+
+			PORTA=(1>>PA6);
+			PORTA=(1<<PA7);
+			_delay_ms(500);
+
+			PORTA=(1>>PA7);
+			PORTB=(1<<PB1);
+			_delay_ms(500);
+
+			PORTB=(1>>PA1);
+			PORTB=(1<<PB2);
+			_delay_ms(500);
+
+			PORTB=(1>>PA2);
+			PORTB=(1<<PB3);
+			_delay_ms(500);
+
+			PORTB=(1>>PA3);
+			PORTB=(1<<PB4);
+			_delay_ms(500);
+
+			PORTB=(1>>PB4);
+			PORTC=(1<<PC3);
+			_delay_ms(500);
+
+			PORTC=(1>>PC3);
+			PORTC=(1<<PC4);
+			_delay_ms(500);
+
+			PORTC=(1>>PC4);
+			PORTC=(1<<PC5);
+			_delay_ms(500);
+
+			PORTC=(1>>PC5);
+			PORTC=(1<<PC6);
+			_delay_ms(500);
+
+			PORTC=(1>>PC6);
+			PORTC=(1<<PC7);
+			_delay_ms(500);
+
+			PORTC=(1>>PC7);
+			PORTD=(1<<PD0);
+			_delay_ms(500);
+
+			PORTD=(1>>PD0);
+			PORTD=(1<<PD1);
+			_delay_ms(500);
+
+			PORTD=(1>>PD1);
+			PORTD=(1<<PD2);
+			_delay_ms(500);
+
+			PORTD=(1>>PD2);
+			PORTD=(1<<PD3);
+			_delay_ms(500);
+
+			PORTD=(1>>PD3);
+			PORTD=(1<<PD4);
+			_delay_ms(500);
+
+			PORTD=(1>>PD4);
+			PORTD=(1<<PD5);
+			_delay_ms(500);
+
+			PORTD=(1>>PD5);
+			PORTD=(1<<PD6);
+			_delay_ms(500);
+
+			PORTD=(1>>PD6);
+			PORTD=(1<<PD7);
+			_delay_ms(500);
+
+			PORTD=(1>>PD7);
+
+			PORTA=0xFF;
+			PORTB=0xFF;
+			PORTC=0xFF;
+			PORTD=0xFF;
+	}
+
+
+
+
+
+
+
+
+
+
+

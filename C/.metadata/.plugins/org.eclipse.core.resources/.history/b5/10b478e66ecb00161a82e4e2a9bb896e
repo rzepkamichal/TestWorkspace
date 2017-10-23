@@ -1,0 +1,121 @@
+/*
+ * main.c
+ *
+ *  Created on: 26.12.2016
+ *      Author: sysoper
+ */
+#include <avr/io.h>
+#include <avr/delay.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+	int random2(int min, int max){
+		int tmp;
+		    if (max>=min)
+		        max-= min;
+		    else
+		    {
+		        tmp= min - max;
+		        min= max;
+		        max= tmp;
+		    }
+		    	return max ? (rand() % max + min) : min;
+	}
+
+
+	int main(void){
+
+		int RandNumber1=random2(0,5);
+
+		DDRA = 0xFF;
+		DDRB = 0xFF;
+		DDRC = 0xFF;
+		DDRD = 0xFF;
+
+		if(RandNumber1==1){
+			PORTA=0xFF;
+			PORTB=0xFF;
+			PORTC=0xFF;
+			PORTD=0xFF;
+		}else if(RandNumber1==2){
+
+			PORTA= 0xFF;
+			PORTC= 0xFF;
+
+			while(1){
+				PORTA^= 0xFF;
+				PORTB^= 0xFF;
+				PORTC^= 0xFF;
+				PORTD^= 0xFF;
+
+				_delay_ms(1000);
+			}
+		}else{
+
+			while(1){
+
+				int RandNumber2=random2(1,25);
+
+				if(RandNumber2==1){
+					PORTA=(1<<PA0);
+				}else if(RandNumber2==2){
+					PORTA=(1<<PA1);
+				}else if(RandNumber2==3){
+					PORTA=(1<<PA2);
+				}else if(RandNumber2==4){
+					PORTA=(1<<PA3);
+				}else if(RandNumber2==5){
+					PORTA=(1<<PA4);
+				}else if(RandNumber2==6){
+					PORTA=(1<<PA5);
+				}else if(RandNumber2==7){
+					PORTA=(1<<PA6);
+				}else if(RandNumber2==8){
+					PORTA=(1<<PA7);
+				}else if(RandNumber2==9){
+					PORTB=(1<<PB1);
+				}else if(RandNumber2==10){
+					PORTB=(1<<PB2);
+				}else if(RandNumber2==11){
+					PORTB=(1<<PB3);
+				}else if(RandNumber2==12){
+					PORTB=(1<<PB4);
+				}else if(RandNumber2==13){
+					PORTC=(1<<PC3);
+				}else if(RandNumber2==14){
+					PORTC=(1<<PC4);
+				}else if(RandNumber2==15){
+					PORTC=(1<<PC5);
+				}else if(RandNumber2==16){
+					PORTC=(1<<PC6);
+				}else if(RandNumber2==17){
+					PORTC=(1<<PC7);
+				}else if(RandNumber2==18){
+					PORTD=(1<<PD0);
+				}else if(RandNumber2==19){
+					PORTD=(1<<PD1);
+				}else if(RandNumber2==20){
+					PORTD=(1<<PD2);
+				}else if(RandNumber2==21){
+					PORTD=(1<<PD3);
+				}else if(RandNumber2==22){
+					PORTD=(1<<PD4);
+				}else if(RandNumber2==23){
+					PORTD=(1<<PD5);
+				}else if(RandNumber2==24){
+					PORTD=(1<<PD6);
+				}else if(RandNumber2==25){
+					PORTD=(1<<PD7);
+				}
+
+				_delay_ms(500);
+			}
+
+		}
+
+	}
+
+
+

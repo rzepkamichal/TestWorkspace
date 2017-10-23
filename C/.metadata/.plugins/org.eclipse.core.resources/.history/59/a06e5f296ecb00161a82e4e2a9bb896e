@@ -1,0 +1,122 @@
+/*
+ * main.c
+ *
+ *  Created on: 26.12.2016
+ *      Author: sysoper
+ */
+#include <avr/io.h>
+#include <avr/delay.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+	int random(int min, int max)
+	{
+    int tmp;
+    if (max>=min)
+        max-= min;
+    else
+    {
+        tmp= min - max;
+        min= max;
+        max= tmp;
+    }
+    	return max ? (rand() % max + min) : min;
+	}
+
+
+
+	int main(void){
+
+		int RandNumber1=random(1,3);
+
+		DDRA = 0xFF;
+		DDRB = 0xFF;
+		DDRC = 0xFF;
+		DDRD = 0xFF;
+
+		if(RandNumber1==1){
+			PORTA=0xFF;
+			PORTB=0xFF;
+			PORTC=0xFF;
+			PORTD=0xFF;
+		}else if(RandNumber1==2){
+
+			PORTA= 0xFF;
+			PORTC= 0xFF;
+
+			while(1){
+				PORTA^= 0xFF;
+				PORTB^= 0xFF;
+				PORTC^= 0xFF;
+				PORTD^= 0xFF;
+
+				_delay_ms(1000);
+			}
+		}else{
+
+			while(1){
+
+				int RandNumber2=random(1,25);
+
+				if(RandNumber2==1){
+					PORTA=(1<<PA0);
+				}else if(RandNumber2==2){
+					PORTA=(1<<PA1);
+				}else if(RandNumber2==3){
+					PORTA=(1<<PA2);
+				}else if(RandNumber2==4){
+					PORTA=(1<<PA3);
+				}else if(RandNumber2==5){
+					PORTA=(1<<PA4);
+				}else if(RandNumber2==6){
+					PORTA=(1<<PA5);
+				}else if(RandNumber2==7){
+					PORTA=(1<<PA6);
+				}else if(RandNumber2==8){
+					PORTA=(1<<PA7);
+				}else if(RandNumber2==9){
+
+				}else if(RandNumber2==10){
+
+				}else if(RandNumber2==11){
+
+				}else if(RandNumber2==12){
+
+				}else if(RandNumber2==13){
+
+				}else if(RandNumber2==14){
+
+				}else if(RandNumber2==15){
+
+				}else if(RandNumber2==16){
+
+				}else if(RandNumber2==17){
+
+				}else if(RandNumber2==18){
+
+				}else if(RandNumber2==19){
+
+				}else if(RandNumber2==20){
+
+				}else if(RandNumber2==21){
+
+				}else if(RandNumber2==22){
+
+				}else if(RandNumber2==23){
+
+				}else if(RandNumber2==24){
+
+				}else if(RandNumber2==25){
+
+				}
+
+				_delay_ms(500);
+			}
+
+		}
+
+	}
+
+
+

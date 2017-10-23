@@ -1,0 +1,15 @@
+coverage_highlight=false
+coverage_stylePreferences=NONE
+coverage_text=false
+eclipse.preferences.version=1
+highlight.text.style=NONE
+matchingTagHighlight=false
+nocoverage_stylePreferences=NONE
+nocoverage_text=false
+org.eclipse.cdt.ui.occurrenceHighlighting=false
+org.eclipse.cdt.ui.occurrenceTextStyle=UNDERLINE
+org.eclipse.cdt.ui.writeOccurrenceHighlighting=false
+overviewRuler_migration=migrated_3.1
+spellingEnabled=false
+thcoverage_stylePreferences=NONE
+thcoverage_text=false

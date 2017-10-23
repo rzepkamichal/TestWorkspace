@@ -1,0 +1,20 @@
+14:13:33 **** Incremental Build of configuration Release for project 01_Test01 ****
+make all 
+'Invoking: Print Size'
+avr-size --format=avr --mcu=attiny2313a 01_Test01.elf
+AVR Memory Usage
+----------------
+Device: attiny2313a
+
+Program:      70 bytes (3.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+'Finished building: sizedummy'
+' '
+
+14:13:33 Build Finished (took 559ms)
+

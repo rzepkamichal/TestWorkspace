@@ -1,0 +1,16 @@
+14:13:35 **** Build of configuration Release for project 03_Test ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: 03_Test.elf'
+'Invoking: AVR C Linker'
+avr-gcc -Wl,-Map,03_Test.map -mmcu=atmega16 -o "03_Test.elf"  ./main.o   
+c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtatmega16.o:(.init9+0x0): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [03_Test.elf] B³¹d 1
+
+14:13:36 Build Finished (took 378ms)
+

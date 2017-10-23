@@ -1,0 +1,21 @@
+11:14:51 **** Incremental Build of configuration Release for project 01_WireTree ****
+make all 
+'Building file: ../main.c'
+'Invoking: AVR Compiler'
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:8:0:
+c:\program files (x86)\atmel\avr tools\avr toolchain\avr\include\avr\delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>." [-Wcpp]
+ #warning "This file has been moved to <util/delay.h>."
+  ^
+In file included from c:\program files (x86)\atmel\avr tools\avr toolchain\avr\include\avr\io.h:99:0,
+                 from ../main.c:7:
+../main.c:10:2: error: expected identifier or '(' before 'volatile'
+  DDRB = (1<<PB1);
+  ^
+../main.c:10:2: error: expected ')' before '(' token
+  DDRB = (1<<PB1);
+  ^
+make: *** [main.o] B³¹d 1
+
+11:14:51 Build Finished (took 232ms)
+
