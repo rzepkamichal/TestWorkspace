@@ -19,10 +19,12 @@ public class Main {
         TurtleAlgorithms alg = new TurtleAlgorithms();
         alg.positioningTurtle(0);
 //        alg. sierpinski(bok, minBok);
-//        alg.sierpinski(300, 50);
+       //alg.sierpinski(120, 50);
 //        alg.callSnowFlake(3, 400);
 //        alg.snowFlake(3, 400);
-        alg.tree(120,20,80);
+   //     alg.tree(120,20,80);
+
+        alg.sierpinskiquadrat(120,10);
     }
     
 }

@@ -76,5 +76,23 @@ public void tree(int bok,double minBok,int alfa){
 
 
 }
+public void sierpinskiquadrat(int bok, double minBok){
+    if(bok<minBok){
+        return;
+    }
+
+    for(int j=0;j<4;j++){
+        sierpinskiquadrat((int)(bok/2),minBok);
+        forward(bok);
+        right(90);
+
+    }
+
+
+
+
+
+
+}
 
 }
