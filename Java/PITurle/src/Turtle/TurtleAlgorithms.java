@@ -56,5 +56,25 @@ public void callSnowFlake(int n, int bok){
       left(120);
     }
 }
+public void tree(int bok,double minBok,int alfa){
+
+    if(bok<minBok){
+        return;
+    }
+
+    left(alfa/2);
+    forward(bok);
+    tree((int)(bok*0.75),minBok,alfa);
+
+    back(bok);
+    right(alfa);
+
+    forward(bok);
+    tree((int)(bok*0.75),minBok,alfa);
+    back(bok);
+    left(alfa/2);
+
+
+}
 
 }
