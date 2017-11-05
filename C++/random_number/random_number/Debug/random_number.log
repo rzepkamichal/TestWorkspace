@@ -1,0 +1,3 @@
+﻿  random_number.cpp
+c:\users\sysoper\desktop\dev\my_workspace\c++\random_number\random_number\random_number.cpp(17): warning C4244: 'argument': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
+  random_number.vcxproj -> C:\Users\sysoper\Desktop\dev\my_workspace\C++\random_number\Debug\random_number.exe
