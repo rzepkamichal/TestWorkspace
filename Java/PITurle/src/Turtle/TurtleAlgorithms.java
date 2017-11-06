@@ -59,7 +59,18 @@ public void callSnowFlake(int n, int bok){
 public void tree(int bok,double minBok,int alfa){
 
     if(bok<minBok){
+        left(40);
+        forward((int)(bok/1.2));
+        right(80);
+        forward((int)(bok/1.2));
+        right(100);
+        forward((int)(bok/1.2));
+        right(80);
+        forward((int)(bok/1.2));
+        right(140);
+
         return;
+
     }
 
     left(alfa/2);
@@ -76,17 +87,35 @@ public void tree(int bok,double minBok,int alfa){
 
 
 }
-public void sierpinskiquadrat(int bok, double minBok){
-    if(bok<minBok){
+public void sierpinskiquadrat(int bok, double minBok) {
+    if (bok < minBok) {
         return;
     }
 
-    for(int j=0;j<4;j++){
-        sierpinskiquadrat((int)(bok/2),minBok);
+    for (int j = 0; j < 4; j++) {
+        sierpinskiquadrat((int) (bok / 2), minBok);
         forward(bok);
         right(90);
 
     }
+}
+    public void triangles(int bok,int n){
+
+    if(n==1) {
+    return;
+    }
+
+    triangles((int)(2*bok/3),n-1);
+
+    right(30);
+    forward(bok);
+    right(120);
+    forward(bok);
+    right(120);
+    forward(bok);
+    right(90);
+
+    }
 
 
 
@@ -95,4 +124,4 @@ public void sierpinskiquadrat(int bok, double minBok){
 
 }
 
-}
+

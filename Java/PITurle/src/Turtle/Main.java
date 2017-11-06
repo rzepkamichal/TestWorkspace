@@ -20,11 +20,11 @@ public class Main {
         alg.positioningTurtle(0);
 //        alg. sierpinski(bok, minBok);
        //alg.sierpinski(120, 50);
-//        alg.callSnowFlake(3, 400);
-//        alg.snowFlake(3, 400);
-   //     alg.tree(120,20,80);
-
-        alg.sierpinskiquadrat(120,10);
+      //  alg.callSnowFlake(3, 400);
+     //   alg.snowFlake(3, 400);
+     //   alg.tree(120,20,60);
+alg.triangles(200,20);
+      //  alg.sierpinskiquadrat(120,10);
     }
     
 }
