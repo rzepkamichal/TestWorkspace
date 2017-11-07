@@ -117,6 +117,21 @@ public void sierpinskiquadrat(int bok, double minBok) {
 
     }
 
+    public void kartkowka(int bok,int minbok,int alpha,double wsp){
+        if(bok<minbok){
+            return;
+        }
+
+        forward((int)(bok/2));
+        left(alpha);
+
+        kartkowka(bok*wsp;minbok,alpha,wsp);
+
+        forward((int)(bok/2));
+        back(bok);
+        right(alpha);
+    }
+
 
 
 

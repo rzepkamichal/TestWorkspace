@@ -23,8 +23,11 @@ public class Main {
       //  alg.callSnowFlake(3, 400);
      //   alg.snowFlake(3, 400);
      //   alg.tree(120,20,60);
-alg.triangles(200,20);
+//alg.triangles(200,20);
       //  alg.sierpinskiquadrat(120,10);
+
+        alg.kartkowka(120,4,30,0.4);
+
     }
     
 }
