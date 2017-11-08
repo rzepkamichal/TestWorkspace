@@ -26,7 +26,7 @@ public class Main {
 //alg.triangles(200,20);
       //  alg.sierpinskiquadrat(120,10);
 
-        alg.kartkowka(120,4,30,0.4);
+        alg.kartkowka(300,10,30,0.4);
 
     }
     

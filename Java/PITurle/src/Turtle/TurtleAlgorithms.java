@@ -125,11 +125,14 @@ public void sierpinskiquadrat(int bok, double minBok) {
         forward((int)(bok/2));
         left(alpha);
 
-        kartkowka(bok*wsp;minbok,alpha,wsp);
+        kartkowka((int)(bok*wsp),minbok,alpha,wsp);
 
+
+        right(alpha);
         forward((int)(bok/2));
         back(bok);
-        right(alpha);
+
+
     }
 
 
