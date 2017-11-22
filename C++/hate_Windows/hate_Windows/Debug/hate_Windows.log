@@ -1,0 +1,4 @@
+﻿  hateWindows.cpp
+c:\users\dell\desktop\dev\my_workspace\c++\hate_windows\hate_windows\hatewindows.cpp(12): warning C4244: "inicjowanie": konwersja z "long double" do "int", możliwa utrata danych
+  hate_Windows.vcxproj -> C:\Users\Dell\Desktop\dev\my_workspace\C++\hate_Windows\Debug\hate_Windows.exe
+  hate_Windows.vcxproj -> C:\Users\Dell\Desktop\dev\my_workspace\C++\hate_Windows\Debug\hate_Windows.pdb (Partial PDB)

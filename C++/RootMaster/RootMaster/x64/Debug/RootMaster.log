@@ -1,0 +1,7 @@
+﻿  RootMaster.cpp
+c:\users\dell\desktop\dev\michal-rzepka-gr02-repo\projekt-01\rootmaster\rootmaster\rootmaster.cpp(169): warning C4244: "=": konwersja z "long double" do "int", możliwa utrata danych
+c:\users\dell\desktop\dev\michal-rzepka-gr02-repo\projekt-01\rootmaster\rootmaster\rootmaster.cpp(191): warning C4244: "=": konwersja z "long double" do "int", możliwa utrata danych
+c:\users\dell\desktop\dev\michal-rzepka-gr02-repo\projekt-01\rootmaster\rootmaster\rootmaster.cpp(242): warning C4244: "=": konwersja z "long double" do "int", możliwa utrata danych
+c:\users\dell\desktop\dev\michal-rzepka-gr02-repo\projekt-01\rootmaster\rootmaster\rootmaster.cpp(277): warning C4244: "=": konwersja z "long double" do "int", możliwa utrata danych
+  RootMaster.vcxproj -> C:\Users\Dell\Desktop\dev\Michal-Rzepka-gr02-repo\projekt-01\RootMaster\x64\Debug\RootMaster.exe
+  RootMaster.vcxproj -> C:\Users\Dell\Desktop\dev\Michal-Rzepka-gr02-repo\projekt-01\RootMaster\x64\Debug\RootMaster.pdb (Partial PDB)
