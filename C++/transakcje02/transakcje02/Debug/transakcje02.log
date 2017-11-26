@@ -1,0 +1,6 @@
+﻿  transakcje02.cpp
+c:\users\sysoper\desktop\dev\my_workspace\c++\transakcje02\transakcje02\transakcje02.cpp(19): warning C4018: '<': signed/unsigned mismatch
+c:\users\sysoper\desktop\dev\my_workspace\c++\transakcje02\transakcje02\transakcje02.cpp(37): warning C4018: '<': signed/unsigned mismatch
+c:\users\sysoper\desktop\dev\my_workspace\c++\transakcje02\transakcje02\transakcje02.cpp(60): warning C4018: '<': signed/unsigned mismatch
+c:\users\sysoper\desktop\dev\my_workspace\c++\transakcje02\transakcje02\transakcje02.cpp(92): warning C4018: '<': signed/unsigned mismatch
+  transakcje02.vcxproj -> C:\Users\sysoper\Desktop\dev\my_workspace\C++\transakcje02\Debug\transakcje02.exe
