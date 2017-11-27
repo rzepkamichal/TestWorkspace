@@ -87,6 +87,14 @@ vector<string> ReadParams(int number, char *args[]){
 	}
 	return tmp;
 }
+void ReadInput(istream &stream){
+	vector<string> inputs;
+	string input;
+	while(getline(stream,input)){
+		inputs.push_back(input);
+	}
+}
+
 
 int main(int argc, char *argv[]) {
 
@@ -102,6 +110,7 @@ int main(int argc, char *argv[]) {
 		case IOGiven:
 			SortParams(params,IOGiven);//czytaj i pisz do pliku - stworzyc funkcje!
 			cout<<"IOGIVEN!! yeah";
+
 			break;
 		case InputDefault:
 			cout<<"Nie podano pliku wejsciowego."<<endl<<"Prosze wprowadzic dane ponize:"<<endl;
