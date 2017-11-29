@@ -14,15 +14,34 @@
 #include <sstream>
 
 using namespace std;
-
-enum InputCase{IODefault,OutputDefault,InputDefault,HelpNeeded,IOGiven,WrongParams};
-
+/*
+ * Enumerator InputCase
+ * Zawiera etykiety nadane przypadkom wystepowania parametrow podanych przy uruchamianiu
+ * IODefault- uzytkownik nie podal sciezek IO
+ * OutPutDefault- uzytkownik nie podal sciezki wyjscia
+ * InputDefault- uzytkonik nie podal sciezki wejsci
+ * IOGiven- uzytkownik podal poprawne sciezki wej/wyj
+ * HelpNeeded- uzytkownik podal bledne parametry lub uzyl przelacznika -h w celu uzyskania pomocy
+ */
+enum InputCase{IODefault,OutputDefault,InputDefault,HelpNeeded,IOGiven};
+/*
+ * Struktura ComplexNum
+ * Reprezentuje liczbe zespolona pod pierwiastkiem
+ * Jej sk³adowe przechowuja kolejno: stopien pierwiastka, czesc rzeczywista, czesc urojona
+ */
 struct ComplexNum{
 	int root;
 	double re;
 	double im;
 };
 
+//FUNKCJE WYKONUJACE OBLICZENIA MATEMATYCZNE
+
+/*Funkcja CheckCase
+ * Jej argumentem jest obiekt typu ComplexNum
+ * Na podstawie skladowych obiektu ComplexNum wyznaczany jest przypadek matematyczny (omowione w sprawozdaniu)
+ * Funkcja zwraca typ int (zmienna occurence, ktora moze przechowywac wartosc od 0-7)
+ */
 int CheckCase(ComplexNum &number) {
 	double re=number.re;
 	double im=number.im;
@@ -55,6 +74,10 @@ int CheckCase(ComplexNum &number) {
 	}
 	return occurence;
 }//funkcja sprawdza na podstawie wartoœci re oraz im, do jakiej æwiartki nale¿y arg g³ówny b¹dŸ na której pó³prostej uk³adu wspó³rzêdnych siê on znajduje
+/*Funkcja FindAlpha
+ *Na podstawie skladowych obiektu ComplexNum i przypadku zwroconego z funkcji CheckCase
+ *funkcja oblicza argument glowny liczby zespolonej (double alpha), ktory nastepnie jest zwracany
+ */
 double FindAlpha(int occurence, ComplexNum &number) {
 	double re=number.re;
 	double im=number.im;
@@ -72,13 +95,21 @@ double FindAlpha(int occurence, ComplexNum &number) {
 	}
 	return alpha;
 }//na podstawie danych przekazanych przez funkcjê CheckCase, funkcja FindAlpha wyznacza argument g³ówny przy wykorzystaniu w³asnoœci funkcji cyklometrycznych
+/*Funkcja CalculateRoot
+ * Na podstawie skladowych obiektu ComplexNum oraz przekazanego argumentu glownego (double alpha)
+ * funkcja oblicza kolejne pierwiastki i przechowuje je w obiekcie vector<double> solutions
+ * Pod indeksami parzystymi zapisywane sa czesci rzeczywiste kolejnych pierwiastkow.
+ * Pod indeksami nieparzystymi zapisywane sa czesci urojone kolejnych pierwiastkow.
+ */
 vector<double>CalculateRoot(double alpha, ComplexNum &number) {
 	vector<double> solutions;
 	double module=sqrt(number.re*number.re+number.im*number.im);
 	int root=number.root;
 	module = pow(module, (1.0 / root));
-
-	if (alpha == acos(-1) + 1) {
+	if(root==1){
+		solutions.push_back(number.re);
+		solutions.push_back(number.im);
+	}else if (alpha == acos(-1) + 1) {
 		solutions.push_back(0);
 		solutions.push_back(0);
 	}
@@ -91,7 +122,10 @@ vector<double>CalculateRoot(double alpha, ComplexNum &number) {
 	}
 	return solutions;
 }//Funkcja FindAlpha przekazuje do funkcji CalculateRoot argument g³ówny. Na tej podstawie, funkcja wyznacza pierwiastki liczby zespolonej. (Na podstawie w³asnoœci liczby zespolonej w postaci trygonometrycznej oraz twierdzenia De Moivre'a)
-void WriteSolutions(ostream& stream,vector<double> &solutions) {
+
+//INTERPRETACJA DANYCH I WYSWIETLANIE WYNIKOW
+
+void WriteSolutions(ostream &stream,vector<double> &solutions) {
 	if(solutions.size()==1){
 		stream<<solutions[0]<<endl;
 	}else{
@@ -371,12 +405,10 @@ bool Calculate(istream &in,ostream &out){
 	return true;
 }
 int main(int argc, char *argv[]) {
-
 	vector<string> params=ReadParams(argc,argv);
-
 	InputCase occurence=CheckParams(params);
 	SortParams(params,occurence);
-
+	// OSTATECZNIE PONIZEJ ZNAJDZIE SIE SWITCH, (jest if bo wczesnie byly problemy ze switchem)
 	if(occurence==IOGiven){
 			ifstream iFile(params[0]);
 			ofstream oFile(params[1]);
@@ -388,6 +420,7 @@ int main(int argc, char *argv[]) {
 			iFile.close();
 			oFile.close();
 		}else if(occurence==OutputDefault){
+			cout<<"Nie wczytano pliku wyjsciowego. Wyniki zostana wyswietlone w konsoli."<<endl;
 			ifstream iFile(params[0]);
 			if(Calculate(iFile,cout)){
 			}else{
@@ -395,6 +428,7 @@ int main(int argc, char *argv[]) {
 			}
 			iFile.close();
 		}else if(occurence==InputDefault){
+			cout<<endl<<"Nie wczytano pliku wejsciowego. Prosze podac ponizej dane w postaci: pierwiastek liczbazespolona"<<endl;
 			ofstream oFile(params[1]);
 			if(Calculate(cin,oFile)){
 			}else{
@@ -402,18 +436,20 @@ int main(int argc, char *argv[]) {
 			}
 			oFile.close();
 		}else if(occurence==IODefault){
+			cout<<"Nie wczytano pliku wyjsciowego. Wyniki zostana wyswietlone w konsoli."<<endl;
+			cout<<endl<<"Nie wczytano pliku wejsciowego. Prosze podac ponizej dane w postaci: pierwiastek liczbazespolona"<<endl;
 			if(Calculate(cin,cout)){
 			}else{
 				cout<<"Blad! Wprowadzono bledne dane.";
 			}
 		}else if(occurence==HelpNeeded){
-				cout<<"Zapytano o pomoc lub program uruchomiono nieprawidlowo"<<endl;
+				cout<<endl<<"Zapytano o pomoc lub program uruchomiono nieprawidlowo"<<endl;
 				cout<<"Mozliwe dane uruchomieniowe:"<<endl;
-				cout<<"RootMaster.exe -h --wyswietl pomoc."<<endl;
-				cout<<"RootMaster.exe -i <we> -o <wyj> -<we> --sciezka pliku wejsciowego, <wyj>-sciezka pliku wyjsciowego"<<endl;
-				cout<<"RootMaster.exe -i <we> -<we> --sciezka pliku wejsciowego, wyjscie jest standardowe"<<endl;
-				cout<<"RootMaster.exe -o <wyj> --wejscie jest standardowe, <wyj>-sciezka pliku wyjsciowego"<<endl;
-				cout<<"RootMaster.exe -i -o lub RootMaster.exe --wejscie i wyjscie sa standardowe"<<endl;
+				cout<<"RootMaster -h --wyswietl pomoc."<<endl;
+				cout<<"RootMaster -i <we> -o <wyj> -<we> --sciezka pliku wejsciowego, <wyj>-sciezka pliku wyjsciowego"<<endl;
+				cout<<"RootMaster -i <we> -<we> --sciezka pliku wejsciowego, wyjscie jest standardowe"<<endl;
+				cout<<"RootMaster -o <wyj> --wejscie jest standardowe, <wyj>-sciezka pliku wyjsciowego"<<endl;
+				cout<<"RootMaster -i -o lub RootMaster --wejscie i wyjscie sa standardowe"<<endl;
 				cout<<"Parametry -i oraz -o mozna uzywac naprzemienie"<<endl;
 		}
 	return 0;
