@@ -1,18 +1,9 @@
-//============================================================================
-// Name        : RootMasterRefactored.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
 #include <cmath>
 #include <string>
 #include <vector>
 #include <fstream>
 #include <sstream>
-
 using namespace std;
 /*
  * Enumerator InputCase
@@ -42,7 +33,7 @@ struct ComplexNum{
  * Na podstawie skladowych obiektu ComplexNum wyznaczany jest przypadek matematyczny (omowione w sprawozdaniu)
  * Funkcja zwraca typ int (zmienna occurence, ktora moze przechowywac wartosc od 0-7)
  */
-int CheckCase(ComplexNum &number) {
+int CheckCase(ComplexNum number) {
 	double re=number.re;
 	double im=number.im;
 	int occurence;
@@ -50,7 +41,7 @@ int CheckCase(ComplexNum &number) {
 		if (re > 0 && im > 0) {
 			occurence = 1;
 		}
-		if (re < 0 && im>0) {
+		if (re < 0 && im > 0) {
 			occurence = 2;
 		}
 		if (re > 0 && im < 0) {
@@ -78,13 +69,12 @@ int CheckCase(ComplexNum &number) {
  *Na podstawie skladowych obiektu ComplexNum i przypadku zwroconego z funkcji CheckCase
  *funkcja oblicza argument glowny liczby zespolonej (double alpha), ktory nastepnie jest zwracany
  */
-double FindAlpha(int occurence, ComplexNum &number) {
-	double re=number.re;
-	double im=number.im;
-	double module=sqrt(re*re+im*im);
+double FindAlpha(int occurence, ComplexNum number) {
+	double module=sqrt(number.re*number.re+number.im*number.im);
 	double alpha;
 	switch (occurence) {
 	case 0: alpha = acos(-1) + 1; break;
+<<<<<<< HEAD
 	case 1: alpha = asin(im / module); break;
 	case 2: alpha = acos(-1) - asin(im / module); break;
 	case 3: alpha = -acos(re / module); break;
@@ -92,6 +82,15 @@ double FindAlpha(int occurence, ComplexNum &number) {
 	case 5: alpha = asin(-1); break;
 	case 6: alpha = 0; break;
 	case 7: alpha = acos(-1); break;
+=======
+	case 1: alpha = asin(number.im / module); break;
+	case 2: alpha = acos(-1) - asin(number.im / module); break;
+	case 3: alpha = -acos(number.re / module); break;
+	case 4: alpha = 0; break;
+	case 5: alpha = acos(-1); break;
+	case 6: alpha = acos(-1) / 2; break;
+	case 7: alpha = -acos(-1) / 2; break;
+>>>>>>> 0f2045d562cac327c908e5a812b9f663fb9206ef
 	}
 	return alpha;
 }//na podstawie danych przekazanych przez funkcjê CheckCase, funkcja FindAlpha wyznacza argument g³ówny przy wykorzystaniu w³asnoœci funkcji cyklometrycznych
@@ -104,20 +103,27 @@ double FindAlpha(int occurence, ComplexNum &number) {
 vector<double>CalculateRoot(double alpha, ComplexNum &number) {
 	vector<double> solutions;
 	double module=sqrt(number.re*number.re+number.im*number.im);
-	int root=number.root;
-	module = pow(module, (1.0 / root));
-	if(root==1){
+	module = pow(module, (1.0 / number.root));
+	if(number.root==1){
 		solutions.push_back(number.re);
 		solutions.push_back(number.im);
 	}else if (alpha == acos(-1) + 1) {
 		solutions.push_back(0);
 		solutions.push_back(0);
 	}
+<<<<<<< HEAD
 	else{
 		alpha = alpha / root;
 		for (int i = 0; i < root; i++) {
 			solutions.push_back((module*cos(alpha + (2 * acos(-1)*i) / root)));
 			solutions.push_back(module*sin(alpha + ((2 * acos(-1)*i) / root)));
+=======
+	else {
+		alpha = alpha / number.root;
+		for (int i = 0; i < number.root; i++) {
+			solutions.push_back(module*cos(alpha + (2 * acos(-1)*i / number.root)));
+			solutions.push_back(module*sin(alpha + (2 * acos(-1)*i / number.root)));
+>>>>>>> 0f2045d562cac327c908e5a812b9f663fb9206ef
 		}
 	}
 	return solutions;
@@ -168,23 +174,17 @@ void WriteSolutions(ostream &stream,vector<double> &solutions) {
 		}
 	}
 }
-
-void SortParams(vector<string> &params, InputCase occurence){
-	vector<string> tmp;
-	for(int i=1;i<params.size();i++){
-		if(occurence==OutputDefault&&params[i-1]=="-i"){
-			tmp.push_back(params[i]); break;
-		}else if(occurence==InputDefault&&params[i-1]=="-o"){
-			tmp.push_back(params[i]); break;
-		}else if(occurence==IOGiven&&params[i-1]=="-i"&&tmp.size()==0){
-			tmp.push_back(params[i]);
-			i=0;
-		}else if(occurence==IOGiven&&params[i-1]=="-o"&&tmp.size()>0){
-			tmp.push_back(params[i]);break;
+bool IsEmpty(string &line){
+	bool isEmpty=true;
+	for(int i=0;i<line.length();i++){
+		if(iswspace(line[i])){
+			continue;
+		}else{
+			isEmpty=false;
+			break;
 		}
 	}
-	params.clear();
-	params=tmp;
+	return isEmpty;
 }
 bool IsValidPath(string &path){
 	fstream file;
@@ -202,8 +202,8 @@ bool IsValidParam(string &param){
 	else
 		return false;
 }
-InputCase CheckParams(vector<string> &params){
-	bool CheckA=false,CheckB=false;
+InputCase CheckParams(vector<string> &params,vector<string> &filePaths){
+	bool inputGiven=false,outputGiven=false;
 	if(params.size()==0||((params.size()==1&&IsValidParam(params[0]))||(params.size()==2&&IsValidParam(params[0])&&IsValidParam(params[1])))){
 		return IODefault;
 	}else if(params.size()==1&&params[0]=="-h"){
@@ -211,17 +211,25 @@ InputCase CheckParams(vector<string> &params){
 	}else{
 		for(int i=0;i<params.size()-1;i++){
 			if(params[i]=="-i"&&IsValidPath(params[i+1])){
-				CheckA=true;
+				inputGiven=true;
+				filePaths.push_back(params[i+1]);
+				if(outputGiven){
+					string tmp=filePaths[0];
+					filePaths.clear();
+					filePaths.push_back(params[i+1]);
+					filePaths.push_back(tmp);
+				}
 			}
 			if(params[i]=="-o"&&IsValidPath(params[i+1])){
-				CheckB=true;
+				outputGiven=true;
+				filePaths.push_back(params[i+1]);
 			}
 		}
-		if(CheckA&&CheckB){
+		if(inputGiven&&outputGiven){
 			return IOGiven;
-		}else if(CheckA&&!CheckB){
+		}else if(inputGiven&&!outputGiven){
 			return OutputDefault;
-		}else if(!CheckA&&CheckB){
+		}else if(!inputGiven&&outputGiven){
 			return InputDefault;
 		}else{
 			return HelpNeeded;
@@ -229,11 +237,11 @@ InputCase CheckParams(vector<string> &params){
 	}
 }
 vector<string> ReadParams(int number, char *args[]){
-	vector<string> tmp;
+	vector<string> params;
 	for(int i=1;i<number;i++){
-		tmp.push_back(args[i]);
+		params.push_back(args[i]);
 	}
-	return tmp;
+	return params;
 }
 bool AreNoForbiddenSigns(string &line){
 	bool areNoForbiddenSigns;
@@ -421,38 +429,35 @@ bool Calculate(istream &in,ostream &out){
 }
 int main(int argc, char *argv[]) {
 	vector<string> params=ReadParams(argc,argv);
-	InputCase occurence=CheckParams(params);
-	SortParams(params,occurence);
+	vector<string> filePaths;
+	InputCase occurence=CheckParams(params,filePaths);
+
 	// OSTATECZNIE PONIZEJ ZNAJDZIE SIE SWITCH, (jest if bo wczesnie byly problemy ze switchem)
 	if(occurence==IOGiven){
-			ifstream iFile(params[0]);
-			ofstream oFile(params[1]);
+			ifstream iFile(filePaths[0]);
+			ofstream oFile(filePaths[1]);
 			if(Calculate(iFile,oFile)){
 			}else{
-				cout<<"Blad! Nie mozna ukonczyc kalkulacji. Napotkano bledne dane w pliku.";
+				cout<<"Blad! Wprowadzono bledne dane.";
 				oFile.clear();
 			}
 			iFile.close();
 			oFile.close();
 		}else if(occurence==OutputDefault){
-			cout<<"Nie wczytano pliku wyjsciowego. Wyniki zostana wyswietlone w konsoli."<<endl;
-			ifstream iFile(params[0]);
+			ifstream iFile(filePaths[0]);
 			if(Calculate(iFile,cout)){
 			}else{
-				cout<<"Blad! Nie mozna ukonczyc kalkulacji. Napotkano bledne dane w pliku.";
+				cout<<"Blad! Nie mozna ukonczyc obliczen. Napotkano bledne dane w pliku.";
 			}
 			iFile.close();
 		}else if(occurence==InputDefault){
-			cout<<endl<<"Nie wczytano pliku wejsciowego. Prosze podac ponizej dane w postaci: pierwiastek liczbazespolona"<<endl;
-			ofstream oFile(params[1]);
+			ofstream oFile(filePaths[0]);
 			if(Calculate(cin,oFile)){
 			}else{
 				cout<<"Blad! Wprowadzono bledne dane.";
 			}
 			oFile.close();
 		}else if(occurence==IODefault){
-			cout<<"Nie wczytano pliku wyjsciowego. Wyniki zostana wyswietlone w konsoli."<<endl;
-			cout<<endl<<"Nie wczytano pliku wejsciowego. Prosze podac ponizej dane w postaci: pierwiastek liczbazespolona"<<endl;
 			if(Calculate(cin,cout)){
 			}else{
 				cout<<"Blad! Wprowadzono bledne dane.";
@@ -461,8 +466,8 @@ int main(int argc, char *argv[]) {
 				cout<<endl<<"Zapytano o pomoc lub program uruchomiono nieprawidlowo"<<endl;
 				cout<<"Mozliwe dane uruchomieniowe:"<<endl;
 				cout<<"RootMaster -h --wyswietl pomoc."<<endl;
-				cout<<"RootMaster -i <we> -o <wyj> -<we> --sciezka pliku wejsciowego, <wyj>-sciezka pliku wyjsciowego"<<endl;
-				cout<<"RootMaster -i <we> -<we> --sciezka pliku wejsciowego, wyjscie jest standardowe"<<endl;
+				cout<<"RootMaster -i <we> -o <wyj>  --<we>-sciezka pliku wejsciowego, <wyj>-sciezka pliku wyjsciowego"<<endl;
+				cout<<"RootMaster -i <we> --<we> sciezka pliku wejsciowego, wyjscie jest standardowe"<<endl;
 				cout<<"RootMaster -o <wyj> --wejscie jest standardowe, <wyj>-sciezka pliku wyjsciowego"<<endl;
 				cout<<"RootMaster -i -o lub RootMaster --wejscie i wyjscie sa standardowe"<<endl;
 				cout<<"Parametry -i oraz -o mozna uzywac naprzemienie"<<endl;
