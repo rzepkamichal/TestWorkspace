@@ -1,4 +1,0 @@
-﻿  testing.cpp
-c:\users\sysoper\desktop\dev\my_workspace\c++\testing\testing\testing.cpp(26): error C2065: 'string': undeclared identifier
-c:\users\sysoper\desktop\dev\my_workspace\c++\testing\testing\testing.cpp(26): error C2146: syntax error: missing ';' before identifier 'napis'
-c:\users\sysoper\desktop\dev\my_workspace\c++\testing\testing\testing.cpp(26): error C2065: 'napis': undeclared identifier
