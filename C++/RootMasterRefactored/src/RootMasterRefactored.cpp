@@ -74,7 +74,7 @@ double FindAlpha(int occurence, ComplexNum number) {
 	double alpha;
 	switch (occurence) {
 	case 0: alpha = acos(-1) + 1; break;
-<<<<<<< HEAD
+
 	case 1: alpha = asin(im / module); break;
 	case 2: alpha = acos(-1) - asin(im / module); break;
 	case 3: alpha = -acos(re / module); break;
@@ -82,7 +82,7 @@ double FindAlpha(int occurence, ComplexNum number) {
 	case 5: alpha = asin(-1); break;
 	case 6: alpha = 0; break;
 	case 7: alpha = acos(-1); break;
-=======
+
 	case 1: alpha = asin(number.im / module); break;
 	case 2: alpha = acos(-1) - asin(number.im / module); break;
 	case 3: alpha = -acos(number.re / module); break;
@@ -90,7 +90,7 @@ double FindAlpha(int occurence, ComplexNum number) {
 	case 5: alpha = acos(-1); break;
 	case 6: alpha = acos(-1) / 2; break;
 	case 7: alpha = -acos(-1) / 2; break;
->>>>>>> 0f2045d562cac327c908e5a812b9f663fb9206ef
+
 	}
 	return alpha;
 }//na podstawie danych przekazanych przez funkcjê CheckCase, funkcja FindAlpha wyznacza argument g³ówny przy wykorzystaniu w³asnoœci funkcji cyklometrycznych
@@ -111,19 +111,19 @@ vector<double>CalculateRoot(double alpha, ComplexNum &number) {
 		solutions.push_back(0);
 		solutions.push_back(0);
 	}
-<<<<<<< HEAD
+
 	else{
 		alpha = alpha / root;
 		for (int i = 0; i < root; i++) {
 			solutions.push_back((module*cos(alpha + (2 * acos(-1)*i) / root)));
 			solutions.push_back(module*sin(alpha + ((2 * acos(-1)*i) / root)));
-=======
+
 	else {
 		alpha = alpha / number.root;
 		for (int i = 0; i < number.root; i++) {
 			solutions.push_back(module*cos(alpha + (2 * acos(-1)*i / number.root)));
 			solutions.push_back(module*sin(alpha + (2 * acos(-1)*i / number.root)));
->>>>>>> 0f2045d562cac327c908e5a812b9f663fb9206ef
+
 		}
 	}
 	return solutions;
