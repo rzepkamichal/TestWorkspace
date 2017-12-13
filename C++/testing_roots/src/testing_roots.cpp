@@ -31,17 +31,20 @@ int CheckCase(ComplexNum number) {
 		if (re > 0 && im < 0) {
 			occurence = 3;
 		}
+		if(re < 0 && im <0){
+			occurence = 4;
+		}
 		if (re == 0) {
 			if (im > 0)
-				occurence = 4;
-			else
 				occurence = 5;
+			else
+				occurence = 6;
 		}
 		if (im == 0) {
 			if (re > 0)
-				occurence = 6;
-			else
 				occurence = 7;
+			else
+				occurence = 8;
 		}
 	}
 	else {
@@ -61,10 +64,11 @@ double FindAlpha(int occurence, ComplexNum number) {
 	case 1: alpha = asin(number.im / module); break;
 	case 2: alpha = acos(-1) - asin(number.im / module); break;
 	case 3: alpha = -acos(number.re / module); break;
-	case 4: alpha = asin(1); break;
-	case 5: alpha = asin(-1); break;
-	case 6: alpha = 0; break;
-	case 7: alpha = acos(-1); break;
+	case 4: alpha = acos(-1)+ acos(abs(number.re/module));break;
+	case 5: alpha = asin(1); break;
+	case 6: alpha = asin(-1); break;
+	case 7: alpha = 0; break;
+	case 8: alpha = acos(-1); break;
 	}
 	return alpha;
 }//na podstawie danych przekazanych przez funkcjê CheckCase, funkcja FindAlpha wyznacza argument g³ówny przy wykorzystaniu w³asnoœci funkcji cyklometrycznych
@@ -132,7 +136,7 @@ void WriteSolutions(ostream &stream,vector<double> &solutions) {
 }
 
 int main() {
-	ComplexNum number{3, -3.324, 0};
+	ComplexNum number{3, -3, -4};
 
 	vector<double> solutions=CalculateRoot(FindAlpha(CheckCase(number),number),number);
 	WriteSolutions(cout,solutions);
