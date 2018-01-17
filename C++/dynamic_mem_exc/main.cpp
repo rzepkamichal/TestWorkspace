@@ -110,6 +110,12 @@ void writeForward(Element *&pHead) {
 }
 
 void writeBack(Element *&pTail){
+    if(!(pTail-> pPrev)){
+        cout<< pTail-> value<< endl;
+    }else{
+        cout<< pTail-> value<<endl;
+        writeBack(pTail-> pPrev);
+    }
 
 }
 
@@ -136,6 +142,8 @@ int main(){
     pushFront(listaHead,listaTail,-935);
 
     writeForward(listaHead);
+    cout<< endl;
+    writeBack(listaTail);
     clearList(listaHead);
     return 0;
 }
