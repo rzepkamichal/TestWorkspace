@@ -1,0 +1,3 @@
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/dynamic_mem_exc/cmake-build-debug/CMakeFiles/dynamic_mem_exc.dir
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/dynamic_mem_exc/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/dynamic_mem_exc/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2017.3.1\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\dynamic_mem_exc.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\dynamic_mem_exc.dir/objects.a @CMakeFiles\dynamic_mem_exc.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\dynamic_mem_exc.dir/objects.a -Wl,--no-whole-archive  -o dynamic_mem_exc.exe -Wl,--out-implib,libdynamic_mem_exc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\dynamic_mem_exc.dir\linklibs.rsp
