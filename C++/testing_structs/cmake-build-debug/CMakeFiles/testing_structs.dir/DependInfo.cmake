@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/bool_array.cpp" "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/bool_array.cpp.obj"
-  "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/debug_new.cpp" "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/debug_new.cpp.obj"
-  "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/main.cpp" "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/main.cpp.obj"
-  "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/mem_pool_base.cpp" "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj"
-  "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/static_mem_pool.cpp" "C:/Users/sysoper/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj"
+  "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/bool_array.cpp" "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/bool_array.cpp.obj"
+  "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/debug_new.cpp" "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/debug_new.cpp.obj"
+  "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/main.cpp" "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/main.cpp.obj"
+  "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/mem_pool_base.cpp" "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj"
+  "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/static_mem_pool.cpp" "C:/Users/Dell/Desktop/dev/my_workspace/C++/testing_structs/cmake-build-debug/CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

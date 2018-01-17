@@ -1,10 +1,9 @@
-// cw10.cpp : Defines the entry point for the console application.
-//
-
+//Need to do something with this
 #include <iostream>
 using namespace std;
 
 typedef int T;
+
 
 struct element
 {

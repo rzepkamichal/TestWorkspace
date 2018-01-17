@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>wycieki</name>
+			<type>2</type>
+			<location>C:/Users/Dell/Desktop/dev/Michal-Rzepka-gr02-repo/temat-10/wycieki</location>
+		</link>
+	</linkedResources>
 </projectDescription>

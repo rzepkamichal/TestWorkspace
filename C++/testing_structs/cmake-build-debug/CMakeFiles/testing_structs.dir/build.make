@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.3.1\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs
+CMAKE_SOURCE_DIR = C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/testing_structs.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/testing_structs.dir/flags.make
 CMakeFiles/testing_structs.dir/bool_array.cpp.obj: CMakeFiles/testing_structs.dir/flags.make
 CMakeFiles/testing_structs.dir/bool_array.cpp.obj: CMakeFiles/testing_structs.dir/includes_CXX.rsp
 CMakeFiles/testing_structs.dir/bool_array.cpp.obj: ../bool_array.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testing_structs.dir/bool_array.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\bool_array.cpp.obj -c C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\bool_array.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testing_structs.dir/bool_array.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\bool_array.cpp.obj -c C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\bool_array.cpp
 
 CMakeFiles/testing_structs.dir/bool_array.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing_structs.dir/bool_array.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\bool_array.cpp > CMakeFiles\testing_structs.dir\bool_array.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\bool_array.cpp > CMakeFiles\testing_structs.dir\bool_array.cpp.i
 
 CMakeFiles/testing_structs.dir/bool_array.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing_structs.dir/bool_array.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\bool_array.cpp -o CMakeFiles\testing_structs.dir\bool_array.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\bool_array.cpp -o CMakeFiles\testing_structs.dir\bool_array.cpp.s
 
 CMakeFiles/testing_structs.dir/bool_array.cpp.obj.requires:
 
@@ -84,16 +84,16 @@ CMakeFiles/testing_structs.dir/bool_array.cpp.obj.provides.build: CMakeFiles/tes
 CMakeFiles/testing_structs.dir/debug_new.cpp.obj: CMakeFiles/testing_structs.dir/flags.make
 CMakeFiles/testing_structs.dir/debug_new.cpp.obj: CMakeFiles/testing_structs.dir/includes_CXX.rsp
 CMakeFiles/testing_structs.dir/debug_new.cpp.obj: ../debug_new.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testing_structs.dir/debug_new.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\debug_new.cpp.obj -c C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\debug_new.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testing_structs.dir/debug_new.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\debug_new.cpp.obj -c C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\debug_new.cpp
 
 CMakeFiles/testing_structs.dir/debug_new.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing_structs.dir/debug_new.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\debug_new.cpp > CMakeFiles\testing_structs.dir\debug_new.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\debug_new.cpp > CMakeFiles\testing_structs.dir\debug_new.cpp.i
 
 CMakeFiles/testing_structs.dir/debug_new.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing_structs.dir/debug_new.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\debug_new.cpp -o CMakeFiles\testing_structs.dir\debug_new.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\debug_new.cpp -o CMakeFiles\testing_structs.dir\debug_new.cpp.s
 
 CMakeFiles/testing_structs.dir/debug_new.cpp.obj.requires:
 
@@ -109,16 +109,16 @@ CMakeFiles/testing_structs.dir/debug_new.cpp.obj.provides.build: CMakeFiles/test
 CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj: CMakeFiles/testing_structs.dir/flags.make
 CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj: CMakeFiles/testing_structs.dir/includes_CXX.rsp
 CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj: ../mem_pool_base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\mem_pool_base.cpp.obj -c C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\mem_pool_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\mem_pool_base.cpp.obj -c C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\mem_pool_base.cpp
 
 CMakeFiles/testing_structs.dir/mem_pool_base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing_structs.dir/mem_pool_base.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\mem_pool_base.cpp > CMakeFiles\testing_structs.dir\mem_pool_base.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\mem_pool_base.cpp > CMakeFiles\testing_structs.dir\mem_pool_base.cpp.i
 
 CMakeFiles/testing_structs.dir/mem_pool_base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing_structs.dir/mem_pool_base.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\mem_pool_base.cpp -o CMakeFiles\testing_structs.dir\mem_pool_base.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\mem_pool_base.cpp -o CMakeFiles\testing_structs.dir\mem_pool_base.cpp.s
 
 CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj.requires:
 
@@ -134,16 +134,16 @@ CMakeFiles/testing_structs.dir/mem_pool_base.cpp.obj.provides.build: CMakeFiles/
 CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj: CMakeFiles/testing_structs.dir/flags.make
 CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj: CMakeFiles/testing_structs.dir/includes_CXX.rsp
 CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj: ../static_mem_pool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\static_mem_pool.cpp.obj -c C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\static_mem_pool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\static_mem_pool.cpp.obj -c C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\static_mem_pool.cpp
 
 CMakeFiles/testing_structs.dir/static_mem_pool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing_structs.dir/static_mem_pool.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\static_mem_pool.cpp > CMakeFiles\testing_structs.dir\static_mem_pool.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\static_mem_pool.cpp > CMakeFiles\testing_structs.dir\static_mem_pool.cpp.i
 
 CMakeFiles/testing_structs.dir/static_mem_pool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing_structs.dir/static_mem_pool.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\static_mem_pool.cpp -o CMakeFiles\testing_structs.dir\static_mem_pool.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\static_mem_pool.cpp -o CMakeFiles\testing_structs.dir\static_mem_pool.cpp.s
 
 CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj.requires:
 
@@ -159,16 +159,16 @@ CMakeFiles/testing_structs.dir/static_mem_pool.cpp.obj.provides.build: CMakeFile
 CMakeFiles/testing_structs.dir/main.cpp.obj: CMakeFiles/testing_structs.dir/flags.make
 CMakeFiles/testing_structs.dir/main.cpp.obj: CMakeFiles/testing_structs.dir/includes_CXX.rsp
 CMakeFiles/testing_structs.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/testing_structs.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\main.cpp.obj -c C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/testing_structs.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\testing_structs.dir\main.cpp.obj -c C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\main.cpp
 
 CMakeFiles/testing_structs.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing_structs.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\main.cpp > CMakeFiles\testing_structs.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\main.cpp > CMakeFiles\testing_structs.dir\main.cpp.i
 
 CMakeFiles/testing_structs.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing_structs.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\main.cpp -o CMakeFiles\testing_structs.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\main.cpp -o CMakeFiles\testing_structs.dir\main.cpp.s
 
 CMakeFiles/testing_structs.dir/main.cpp.obj.requires:
 
@@ -201,7 +201,7 @@ testing_structs.exe: CMakeFiles/testing_structs.dir/build.make
 testing_structs.exe: CMakeFiles/testing_structs.dir/linklibs.rsp
 testing_structs.exe: CMakeFiles/testing_structs.dir/objects1.rsp
 testing_structs.exe: CMakeFiles/testing_structs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable testing_structs.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable testing_structs.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\testing_structs.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -222,6 +222,6 @@ CMakeFiles/testing_structs.dir/clean:
 .PHONY : CMakeFiles/testing_structs.dir/clean
 
 CMakeFiles/testing_structs.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug C:\Users\sysoper\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles\testing_structs.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug C:\Users\Dell\Desktop\dev\my_workspace\C++\testing_structs\cmake-build-debug\CMakeFiles\testing_structs.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/testing_structs.dir/depend
 
