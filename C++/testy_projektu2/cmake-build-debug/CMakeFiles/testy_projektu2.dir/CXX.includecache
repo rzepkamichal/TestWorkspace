@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/testy_projektu2/main.cpp
+iostream
+-
+fstream
+-
+chrono
+-
+random
+-
+

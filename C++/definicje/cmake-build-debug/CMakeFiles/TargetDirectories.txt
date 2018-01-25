@@ -1,0 +1,3 @@
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/definicje/cmake-build-debug/CMakeFiles/definicje.dir
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/definicje/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/definicje/cmake-build-debug/CMakeFiles/rebuild_cache.dir
