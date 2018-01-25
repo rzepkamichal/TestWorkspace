@@ -1,0 +1,3 @@
+C:/Users/sysoper/Desktop/dev/Michal-Rzepka-gr02-repo/projekt-02/proj_v1/cmake-build-debug/CMakeFiles/proj_v1.dir
+C:/Users/sysoper/Desktop/dev/Michal-Rzepka-gr02-repo/projekt-02/proj_v1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sysoper/Desktop/dev/Michal-Rzepka-gr02-repo/projekt-02/proj_v1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
