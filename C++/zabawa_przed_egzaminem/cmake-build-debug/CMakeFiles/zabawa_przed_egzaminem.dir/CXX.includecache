@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/sysoper/Desktop/dev/my_workspace/C++/zabawa_przed_egzaminem/main.cpp
+iostream
+-
+vector
+-
+cmath
+-
+afxres.h
+-
+fstream
+-
+iomanip
+-
+
