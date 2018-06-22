@@ -1,0 +1,3 @@
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testy/cmake-build-debug/CMakeFiles/testy.dir
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testy/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testy/cmake-build-debug/CMakeFiles/rebuild_cache.dir

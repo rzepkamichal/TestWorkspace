@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/fileReading/main.c
+stdio.h
+-
+malloc.h
+-
+mem.h
+-
+

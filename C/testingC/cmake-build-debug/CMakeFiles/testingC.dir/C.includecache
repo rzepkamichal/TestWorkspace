@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testingC/definicje.c
+deklaracje.h
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testingC/deklaracje.h
+
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testingC/deklaracje.h
+
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testingC/main.c
+stdio.h
+-
+definicje.c
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testingC/definicje.c
+deklaracje.h
+C:/Users/sysoper/Desktop/dev/TestWorkspace/C/testingC/deklaracje.h
+

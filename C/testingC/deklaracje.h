@@ -1,0 +1,4 @@
+#ifndef TESTINGC_DEKLARACJE_H
+#define TESTINGC_DEKLARACJE_H
+int kwadrat(int bok);
+#endif //TESTINGC_DEKLARACJE_H
