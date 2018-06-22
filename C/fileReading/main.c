@@ -31,18 +31,32 @@ void writeBuffer(Bufferek* buff){
 
 int main(int argc, char* argv[]) {
 
-    /*
-    FILE *iFile = fopen(argv[1],"r");
-    fseek(iFile,0,SEEK_END);
-    long bufferSize = ftell(iFile);
-    char *buffer = malloc(bufferSize + 1);
-    fseek(iFile,0,SEEK_SET);
-    fread(buffer,sizeof(char),bufferSize,iFile);
-    buffer[bufferSize] = '\0';
-    fclose(iFile);
+   char napis1[] = "abcfeg";
+    char *napis = malloc(strlen(napis1)+1);
+
+    strcpy(napis,napis1);
+
+    char* buffer;
+
+    buffer = malloc(strlen(napis)+1);
+
+    strcpy(buffer,napis);
+
+    puts(buffer);
+}
+
+/*
+FILE *iFile = fopen(argv[1],"r");
+fseek(iFile,0,SEEK_END);
+long bufferSize = ftell(iFile);
+char *buffer = malloc(bufferSize + 1);
+fseek(iFile,0,SEEK_SET);
+fread(buffer,sizeof(char),bufferSize,iFile);
+buffer[bufferSize] = '\0';
+fclose(iFile);
 */
 
-
+/*
     char nazwa[] = "Chmurowisko";
     char email[] = "miroburn@gmail.com";
     char telefon[] = "997 998 999";
@@ -50,7 +64,7 @@ int main(int argc, char* argv[]) {
 
 
     Bufferek buff;
-/*
+
     (buff).nazwa = malloc(sizeof(nazwa));
     (buff).email = malloc(sizeof(email));
     (buff).telefon = malloc(sizeof(telefon));
@@ -62,7 +76,7 @@ int main(int argc, char* argv[]) {
     puts((buff).nazwa);
     puts((buff).email);
     puts((buff).telefon);
-*/
+
 
     setBuffer(&buff,nazwa,email,telefon);
 
@@ -78,8 +92,4 @@ int main(int argc, char* argv[]) {
     free(buff.email);
     free(buff.telefon);
 
-
-
-
-    return 0;
-}
+*/
