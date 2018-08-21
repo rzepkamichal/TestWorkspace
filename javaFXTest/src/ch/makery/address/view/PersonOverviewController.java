@@ -81,6 +81,33 @@ public class PersonOverviewController {
 	
 	}
 	
+	/**
+	 * 
+	 * @param person
+	 */
+	
+	private void showPersonDetails(Person person){
+		
+		if(person != null) {
+			firstNameLabel.setText(person.getFirstName());
+	        lastNameLabel.setText(person.getLastName());
+	        streetLabel.setText(person.getStreet());
+	        postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
+	        cityLabel.setText(person.getCity());
+		
+		}else {
+			 firstNameLabel.setText("");
+		     lastNameLabel.setText("");
+		     streetLabel.setText("");
+		     postalCodeLabel.setText("");
+		     cityLabel.setText("");
+		     birthdayLabel.setText("");
+		}
+		
+	}
+	
+	
+	
 	
 	
 }
