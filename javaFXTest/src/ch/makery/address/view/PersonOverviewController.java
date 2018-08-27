@@ -2,6 +2,7 @@ package ch.makery.address.view;
 
 import ch.makery.address.MainApp;
 import ch.makery.address.model.Person;
+import ch.makery.address.util.DateUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -64,7 +65,12 @@ public class PersonOverviewController {
 		//initialize the person table with the two columns
 		
 		firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+			
 		lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+		
+		showPersonDetails(null);
+		
+		personTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)-> showPersonDetails(newValue));
 		
 	}
 	
@@ -94,6 +100,7 @@ public class PersonOverviewController {
 	        streetLabel.setText(person.getStreet());
 	        postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
 	        cityLabel.setText(person.getCity());
+	        birthdayLabel.setText(DateUtil.format(person.getBirthday()));
 		
 		}else {
 			 firstNameLabel.setText("");
@@ -106,6 +113,11 @@ public class PersonOverviewController {
 		
 	}
 	
+	@FXML
+	private void handleDeletePerson() {
+		int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
+		personTable.getItems().remove(selectedIndex);
+	}
 	
 	
 	
