@@ -11,6 +11,7 @@ import ch.makery.address.model.Person;
 import ch.makery.address.util.DateUtil;
 
 public class PersonOverviewController {
+
     @FXML
     private TableView<Person> personTable;
     @FXML
